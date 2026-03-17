@@ -41,8 +41,8 @@ let time = TIME_PER_QUESTION;
 let questionCount = 0;
 let isAnswered = false;
 
-const correctSound = new Audio("correct(1).mp3");
-const wrongSound = new Audio("wrong(1).mp3");
+const correctSound = new Audio("correct.mp3");
+const wrongSound = new Audio("wrong.mp3");
 
 startBtn.addEventListener("click", startGame);
 restartBtn.addEventListener("click", restartGame);
@@ -180,9 +180,9 @@ function checkAnswer(e) {
     
     if (selectedAnswer === correctAnswer) {
         score += 10 + time;
-        correctSound.play().catch(() => {});
+        correctSound.play();
     } else {
-        wrongSound.play().catch(() => {});
+        wrongSound.play();
     }
     
     scoreEl.textContent = `Score: ${score}`;

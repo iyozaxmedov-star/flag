@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай флаг</title>
+    <link rel="stylesheet" href="./MAIN.CSS">
+</head>
+<body>
+    <main class="site-main">
+        <section class="player-form">
+            <h2>Enter your name</h2>
+            <input type="text" class="js-player-name" placeholder="Your name" maxlength="20">
+            <button class="js-start-btn">Start Game</button>
+        </section>
+
+        <section class="game hidden">
+            <div class="container">
+                <h2 class="game-title">Guess the country</h2>
+                
+                <div class="game-info">
+                    <span class="js-score">Score: 0</span>
+                    <span class="js-timer">Time: 15</span>
+                    <span class="js-question-count">Question: 0/10</span>
+                </div>
+
+                <img class="js-flag" src="" alt="Flag">
+
+                <ul class="answers js-answers"></ul>
+
+                <template id="answer-template">
+                    <li class="answer-btn">
+                        <button class="js-answer-btn"></button>
+                    </li>
+                </template>
+            </div>
+        </section>
+
+        <section class="leaderboard js-leaderboard hidden">
+            <h2>Game Over!</h2>
+            <p class="final-score js-final-score"></p>
+            <h3>Leaderboard</h3>
+            <ul class="js-leaderboard-list"></ul>
+            <button class="js-restart-btn">Play Again</button>
+        </section>
+    </main>
+
+    <script type="module" src="./MAIN.JS"></script>
+</body>
+</html>
